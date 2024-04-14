@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    background: #0E3058 !important;
+    padding: 0 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer {
+    background: #0E3058 !important;
+}
+
+.logo {
+    height: 30px;
+}

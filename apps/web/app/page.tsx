@@ -1,13 +1,14 @@
-import { PrismaClient } from '@prisma/client'
+import { getServerSession } from 'next-auth'
+import { authOptions } from './api/auth/[...nextauth]/route'
+import { redirect } from "next/navigation";
 
-export default async function IndexPage() {
-  const prisma = new PrismaClient()
-  const users = await prisma.user.findMany();
+export default async function Page() {
+  const session = await getServerSession(authOptions)
 
-  return (
-    <div>
-      <h1>Hello World</h1>
-      <pre>{JSON.stringify(users, null, 2)}</pre>
-    </div>
-  );
+  // TODO
+  // if (!session || !session.user) {
+  //   redirect('/api/auth/signin')
+  // }
+  
+  redirect('/localization')
 }
