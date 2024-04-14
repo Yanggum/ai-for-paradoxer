@@ -2,19 +2,52 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+	provider             = "mysql"
+	url                  = env("DATABASE_URL")
+	referentialIntegrity = "prisma"
 }
 
 generator client {
-  provider = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+	provider        = "prisma-client-js"
+	previewFeatures = ["referentialIntegrity"]
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
+	id            String    @id @default(cuid())
+	name          String?
+	email         String?   @unique
+	emailVerified DateTime?
+}
+
+model HOIMod {
+	id            String             @id @default(uuid())
+	modName       String // 모드 이름
+	creator       String // 모드 제작자 이름
+	localizations GameLocalization[] // 연관된 지역화 데이터들
+}
+
+model GameLocalization {
+	id       String                 @id @default(uuid())
+	language String // 지원 언어 ISO 코드 (예: "ko", "en")
+	country  String // 국가 코드 (예: "KR", "US")
+	modId    String // HOIMod 모델의 ID 참조
+	HOIMod   HOIMod                 @relation(fields: [modId], references: [id])
+	files    GameLocalizationFile[] // 연관된 localization 파일들
+}
+
+model GameLocalizationFile {
+	id             String                     @id @default(uuid())
+	fileName       String // 파일 이름
+	path           String // 파일 저장 경로
+	localizationId String // Localization 모델의 ID 참조
+	Localization   GameLocalization           @relation(fields: [localizationId], references: [id])
+	items          GameLocalizationFileItem[] // 포함된 문구 항목들
+}
+
+model GameLocalizationFileItem {
+	id                   String               @id @default(uuid())
+	key                  String // 로컬라이제이션 키
+	value                String // 번역된 문자열
+	fileId               String // LocalizationFile 모델의 ID 참조
+	GameLocalizationFile GameLocalizationFile @relation(fields: [fileId], references: [id])
 }

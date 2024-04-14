@@ -1,0 +1,47 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/sonarlint/issuestore/1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
+/sonarlint/securityhotspotstore/1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
+/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+/sonarlint/securityhotspotstore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+/sonarlint/issuestore/0/3/03b4e5a11ef323aecba983f1f382f652e3451b84
+/sonarlint/securityhotspotstore/0/3/03b4e5a11ef323aecba983f1f382f652e3451b84
+/sonarlint/issuestore/5/c/5c19168a365548bc3b603c5cf957bb3109a77b6a
+/sonarlint/securityhotspotstore/5/c/5c19168a365548bc3b603c5cf957bb3109a77b6a
+/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+/sonarlint/issuestore/2/1/21e48051c44828c44e4cea9e820f8aa62440f471
+/sonarlint/securityhotspotstore/2/1/21e48051c44828c44e4cea9e820f8aa62440f471
+/sonarlint/issuestore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+/sonarlint/securityhotspotstore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+/sonarlint/issuestore/1/9/197e113e4d3e2483109b8bcb0fab7460268a7d3e
+/sonarlint/securityhotspotstore/1/9/197e113e4d3e2483109b8bcb0fab7460268a7d3e
+/sonarlint/issuestore/9/9/999aa1d78613661d31df34a1a67a933a0e2779dc
+/sonarlint/securityhotspotstore/9/9/999aa1d78613661d31df34a1a67a933a0e2779dc
+/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+/sonarlint/securityhotspotstore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+/sonarlint/issuestore/4/0/40849b8c191dabc1178962b4bc795a4b97fbc7d2
+/sonarlint/securityhotspotstore/4/0/40849b8c191dabc1178962b4bc795a4b97fbc7d2
+/sonarlint/issuestore/4/2/42090bcb4dff2f4fe45a0768473b340a94766baf
+/sonarlint/securityhotspotstore/4/2/42090bcb4dff2f4fe45a0768473b340a94766baf
+/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+/sonarlint/issuestore/a/8/a829ed6336deb68f9874e5da490e1ec440b0e9b7
+/sonarlint/securityhotspotstore/a/8/a829ed6336deb68f9874e5da490e1ec440b0e9b7
+/ai-for-paradoxer.iml
+/sonarlint/issuestore/c/f/cf01310c24614f303ce4fdac1c0334c79990fd7c
+/sonarlint/securityhotspotstore/c/f/cf01310c24614f303ce4fdac1c0334c79990fd7c
+/sonarlint/issuestore/d/4/d4dae00d11854b35292c2b8a30515a9a0aa2d871
+/sonarlint/securityhotspotstore/d/4/d4dae00d11854b35292c2b8a30515a9a0aa2d871
+/sonarlint/issuestore/d/4/d42fc0d36b8e9b6064879b3fc4fbe34e531f18fc
+/sonarlint/securityhotspotstore/d/4/d42fc0d36b8e9b6064879b3fc4fbe34e531f18fc
+/sonarlint/issuestore/d/b/dbc0c31823b8f2e4ed04a397722fed33a67f123f
+/sonarlint/securityhotspotstore/d/b/dbc0c31823b8f2e4ed04a397722fed33a67f123f
+/sonarlint/issuestore/index.pb
+/sonarlint/securityhotspotstore/index.pb
