@@ -6,6 +6,7 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "db:migrate": "prisma migrate dev --name init --preview-feature",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
@@ -16,7 +17,6 @@
     "db:pull": "prisma migrate pull --preview-feature",
     "db:status": "prisma migrate status --preview-feature",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "generate": "turbo run generate",
     "lint": "turbo run lint"
   },
