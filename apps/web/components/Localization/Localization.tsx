@@ -91,11 +91,11 @@ export function Localization({ users }: { users: any[] }) {
     setSortedData(filterData(users, newSearch))
   }
 
-  const rows = sortedData.map(row => {
+  const rows = sortedData.map((row, index) => {
     const selected = selection.includes(row.id)
 
     return (
-      <Table.Tr key={row.id} className={cx({ [classes.rowSelected]: selected })}>
+      <Table.Tr key={row.id + index} className={cx({ [classes.rowSelected]: selected })}>
         <Table.Td>
           <Checkbox
             checked={selection.includes(row.id)}
@@ -153,6 +153,21 @@ export function Localization({ users }: { users: any[] }) {
                   contractNoList: selection,
                 },
               }}>
+              Upload Localization
+            </Button>
+            <Button
+              style={{ alignSelf: 'flex-end' }}
+              ml={10}
+              disabled={selection.length === 0}
+              // onClick={handleDownload}
+              component={Link}
+              href={{
+                pathname: '/api/test/download',
+                query: {
+                  poNo: userId,
+                  contractNoList: selection,
+                },
+              }}>
               Download Localization
             </Button>
           </Grid.Col>
@@ -178,7 +193,7 @@ export function Localization({ users }: { users: any[] }) {
             <Table.Th>test test</Table.Th>
           </Table.Tr>
         </Table.Thead>
-        <Table.Tbody>
+        <Table.Tbody id={'test'}>
           {rows.length > 0 ? (
             rows
           ) : (

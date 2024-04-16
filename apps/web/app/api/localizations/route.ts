@@ -8,10 +8,10 @@ export async function GET(request: NextRequest) {
 
   let localizations: UserDetail[] = []
 
-  if (test) {
+  // if (test) {
     localizations = await prisma.user.findMany({
     })
-  }
+  // }
 
   return NextResponse.json(localizations)
 }

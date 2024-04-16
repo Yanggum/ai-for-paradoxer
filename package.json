@@ -16,6 +16,8 @@
     "db:push": "prisma migrate push --preview-feature",
     "db:pull": "prisma migrate pull --preview-feature",
     "db:status": "prisma migrate status --preview-feature",
+    "clean": "turbo clean --no-daemon && pnpm dlx rimraf node_modules",
+    "reboot": "turbo clean --no-daemon && pnpm dlx rimraf node_modules && pnpm install && turbo build --no-daemon",
     "dev": "turbo run dev",
     "generate": "turbo run generate",
     "lint": "turbo run lint"

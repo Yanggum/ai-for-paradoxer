@@ -7,6 +7,9 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
+    "clean": {
+      "cache": false
+    },
     "db:migrate": {},
     "db:migrate:rest": {},
     "db:migrate:deploy": {},
