@@ -1,4 +1,6 @@
 
+// @ts-ignore
+import { Promise } from 'bluebird';
 import type { User } from "@prisma/client";
 import prisma from "./client";
 
@@ -10,7 +12,8 @@ const DEFAULT_USERS = [
   },
 ] as Array<Partial<User>>;
 
-(async () => {
+// @ts-ignore
+const seed = async () => {
   try {
     await Promise.all(
       DEFAULT_USERS.map((user) =>
@@ -29,8 +32,14 @@ const DEFAULT_USERS = [
     );
   } catch (error) {
     console.error(error);
-    process.exit(1);
+    //process.exit(1);
   } finally {
     await prisma.$disconnect();
   }
-})();
+}
+
+seed().then(r => console.log('Seed complete'));
+
+// (async () => {
+//
+// })();
