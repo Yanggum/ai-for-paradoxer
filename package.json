@@ -1,11 +1,15 @@
 {
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "prisma": {
     "schema": "packages/database/prisma/schema.prisma",
     "seed": "tsx packages/database/src/seed.ts"
   },
   "scripts": {
     "build": "turbo run build",
+    "build:packages": "turbo run build --no-daemon --filter=\"./packages/*\"",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "db:migrate": "prisma migrate dev --name init --preview-feature",
     "db:generate": "prisma generate",
@@ -24,12 +28,16 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@types/module-alias": "^2.0.4",
     "prettier": "^3.2.5",
     "tsx": "^4.7.1",
     "turbo": "latest"
   },
+  "_moduleAliases": {
+    "@repo/dto": "packages/dto/dist"
+  },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@8.15.3"
+  "packageManager": "pnpm@9.1.0"
 }

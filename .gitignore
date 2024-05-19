@@ -31,3 +31,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+/.env.development.local
+/packages/dto/dist/
+/packages/database/generated/
+/.idea/sonarlint/

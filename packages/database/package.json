@@ -23,7 +23,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^5.10.2",
+    "@prisma/client": "^5.14.0",
     "@types/bluebird": "^3.5.42"
   },
   "devDependencies": {
